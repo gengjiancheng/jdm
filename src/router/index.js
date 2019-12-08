@@ -1,27 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Index from '../views/index.vue'
+import Home from './Home/Home'
+import Cart from './Cart/Cart'
+import Classification from './Classification/Classification'
+import Find from './Find/Find'
+import My from './My/My'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
-    name: 'home',
-    component: Home
+    name: 'index',
+    component: Index,
+    redirect: '/index/Home',
+    children: Home.concat(Cart, Classification, Find, My)
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '*', // 走到不存在的路径时 重新跳转到首页
+    redirect: '/'
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })

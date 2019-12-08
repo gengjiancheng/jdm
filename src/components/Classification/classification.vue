@@ -1,0 +1,15 @@
+<template>
+  <div>分类</div>
+</template>
+<script>
+// @ is an alias to /src
+export default {
+  name: "classification",
+  data() {
+    return {};
+  },
+  components: {}
+};
+</script>
+<style lang="less">
+</style>
