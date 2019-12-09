@@ -1,9 +1,5 @@
 <template>
-<<<<<<< HEAD
   <div class='mianBox'>
-    
-=======
-  <div>
     <span>首页</span>
     <div class="get_address_btn" @click="getAddress('fang')">
       获取fang地址
@@ -12,7 +8,6 @@
       获取cui地址
     </div>
     <div class="show_address" v-text="address"></div>
->>>>>>> master
   </div>
 </template>
 <script>
