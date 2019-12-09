@@ -1,11 +1,23 @@
 <template>
   <div>
     <div class="nav">
-      <router-link to="/index/Home" tag="span">首页</router-link>
-      <router-link to="/index/Classification" tag="span">分类</router-link>
-      <router-link to="/index/Find" tag="span">发现</router-link>
-      <router-link to="/index/Cart" tag="span">购物车</router-link>
-      <router-link to="/index/My" tag="span">我的</router-link>
+      <van-tabbar v-model="active">
+        <router-link to="/index/Home" tag="span">
+          <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+        </router-link>
+        <router-link to="/index/Classification" tag="span">
+          <van-tabbar-item icon="apps-o">分类</van-tabbar-item>
+        </router-link>
+        <router-link to="/index/Find" tag="span">
+          <van-tabbar-item icon="share">发现</van-tabbar-item>
+        </router-link>
+        <router-link to="/index/Cart" tag="span">
+          <van-tabbar-item icon="shopping-cart-o">购物车</van-tabbar-item>
+        </router-link>
+        <router-link to="/index/My" tag="span">
+          <van-tabbar-item icon="contact">我的</van-tabbar-item>
+        </router-link>
+      </van-tabbar>
     </div>
     <router-view></router-view>
   </div>
@@ -15,12 +27,19 @@
 export default {
   name: "XXX",
   data() {
-    return {};
+    return {
+      active: 0
+    };
   },
   components: {}
 };
 </script>
 <style lang="less">
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 .nav {
   position: fixed;
   left: 0;
@@ -30,6 +49,7 @@ export default {
   display: flex;
   span {
     flex: 1;
+    width: 20vw;
     line-height: 15vw;
     font-size: 4vw;
   }
