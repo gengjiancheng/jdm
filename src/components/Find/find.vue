@@ -18,8 +18,13 @@
       <van-tab title="京品" to="/index/Find/Jing"></van-tab>
       <van-tab title="5G" to="/index/Find/Five"></van-tab>
       <van-tab title="直播" to="/index/Find/Broadcast"></van-tab>
-      <van-tab title="视频" to="/index/Find/Video"></van-tab>
+      <van-tab title="视频" to="/index/Find/Videoo"></van-tab>
     </van-tabs>
+
+    <!-- <van-tabs v-model="active" animated>
+      <van-tab :title="'选项 ' + index"></van-tab>
+    </van-tabs>-->
+
     <router-view></router-view>
   </div>
 </template>
