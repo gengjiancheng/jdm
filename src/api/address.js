@@ -1,8 +1,8 @@
-import api from './index';
+import http from './index';
 
 
 export function getAddressApi (value) {
-    return api.get('/address', {
+    return http.get('/address', {
         params: value
     });
 }
