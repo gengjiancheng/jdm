@@ -16,27 +16,27 @@ export default [{
             component: Follow
         },
         {
-            path: '/Bask',
+            path: '/index/Find/Bask',
             name: 'Bask',
             component: Bask
         },
         {
-            path: '/Jing',
+            path: '/index/Find/Jing',
             name: 'Jing',
             component: Jing
         },
         {
-            path: '/Five',
+            path: '/index/Find/Five',
             name: 'Five',
             component: Five
         },
         {
-            path: '/Broadcast',
+            path: '/index/Find/Broadcast',
             name: 'Broadcast',
             component: Broadcast
         },
         {
-            path: '/Video',
+            path: '/index/Find/Video',
             name: 'Video',
             component: Video
         }
