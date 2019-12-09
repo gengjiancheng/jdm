@@ -1,6 +1,6 @@
 <template>
   <div>
-    哈哈哈哈
+    关注
   </div>
 </template>
 <script>

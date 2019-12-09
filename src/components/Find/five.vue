@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        5G
     </div>
 </template>
 <script>

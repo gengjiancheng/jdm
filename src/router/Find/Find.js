@@ -4,7 +4,7 @@ import Bask from '../../components/Find/bask.vue'
 import Jing from '../../components/Find/jing.vue'
 import Five from '../../components/Find/five.vue'
 import Broadcast from '../../components/Find/broadcast.vue'
-import Video from '../../components/Find/video.vue'
+import Videoo from '../../components/Find/videoo.vue'
 
 export default [{
     path: '/index/Find',
@@ -36,9 +36,9 @@ export default [{
             component: Broadcast
         },
         {
-            path: '/index/Find/Video',
-            name: 'Video',
-            component: Video
+            path: '/index/Find/Videoo',
+            name: 'Videoo',
+            component: Videoo
         }
     ]
 }]
