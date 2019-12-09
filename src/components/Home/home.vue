@@ -1,5 +1,7 @@
 <template>
-  <div>首页</div>
+  <div class='mianBox'>
+    
+  </div>
 </template>
 <script>
 // @ is an alias to /src
