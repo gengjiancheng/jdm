@@ -6,21 +6,18 @@ import Cart from './Cart/Cart'
 import Classification from './Classification/Classification'
 import Find from './Find/Find'
 import My from './My/My'
-
+import search from './search'
+import detail from './detail'
 Vue.use(VueRouter)
 
+
 const routes = [{
-    path: '/',
-    name: 'index',
-    component: Index,
-    redirect: '/index/Home',
-    children: Home.concat(Cart, Classification, Find, My)
-  },
-  {
-    path: '*', // 走到不存在的路径时 重新跳转到首页
-    redirect: '/'
-  }
-]
+  path: '/',
+  name: 'index',
+  component: Index,
+  redirect: '/index/Home',
+  children: Home.concat(Cart, Classification, Find, My)
+}].concat(search,detail)
 
 const router = new VueRouter({
   mode: 'hash',

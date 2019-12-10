@@ -30,12 +30,12 @@
             <div class="R lt">
               <h3 class="lt">{{item.desc}}</h3>
               <p class="lt">{{item.shop}}</p>
-              <div class="picBox">
+              <div class="picBox lt">
                 <div class="leftB lt">
                   <img :src="item.img2" alt />
                   <p class="price">￥{{item.price}}</p>
                 </div>
-                <div class="rightB lt">
+                <div class="rightB rt">
                   <img :src="item.img3" alt />
                 </div>
               </div>
@@ -223,12 +223,16 @@ export default {
         height: 46vw;
         padding: 2vw;
         > h3 {
-          width: 46vw;
+          width: 100vw;
+          text-align: left;
+        }
+        >p{
+          width: 100vw;
           text-align: left;
         }
         .picBox {
           width: 44vw;
-          height: 20vw;
+          height: 22vw;
           .leftB {
             width: 22vw;
             height: 22vw;
@@ -251,7 +255,7 @@ export default {
           .rightB {
             width: 22vw;
             height: 22vw;
-            position: relative;
+            // position: relative;
             > img {
               width: 100%;
               height: 100%;

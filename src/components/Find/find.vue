@@ -7,18 +7,16 @@
         </div>
         <span class="text">发现</span>
         <div class="rightIcon rt">
-          <van-icon name="search" color="white" size="25px" />
+          <router-link to="/search">
+            <van-icon name="search" color="white" size="25px" />
+          </router-link>
           <van-icon class="chat" name="chat-o" color="white" size="25px" />
         </div>
       </div>
     </div>
-    <van-tabs v-model="active" :duration="0" :swipe-threshold="6">
+    <van-tabs v-model="active" :duration="0" :swipe-threshold="2">
       <van-tab title="关注" to="/index/Find/Follow"></van-tab>
-      <van-tab title="晒一晒" to="/index/Find/Bask"></van-tab>
-      <van-tab title="京品" to="/index/Find/Jing"></van-tab>
-      <van-tab title="5G" to="/index/Find/Five"></van-tab>
       <van-tab title="直播" to="/index/Find/Broadcast"></van-tab>
-      <van-tab title="视频" to="/index/Find/Videoo"></van-tab>
     </van-tabs>
     <router-view></router-view>
   </div>
