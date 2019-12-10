@@ -38,10 +38,10 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.van-tab {
-  padding: 0;
-  margin: 0;
-}
+// .van-tab {
+//   padding: 0;
+//   margin: 0;
+// }
 .lt {
   float: left;
 }

@@ -205,7 +205,6 @@ export default {
 }
 .broad {
   width: 100vw;
-
   ul {
     width: 100vw;
     overflow: hidden;
