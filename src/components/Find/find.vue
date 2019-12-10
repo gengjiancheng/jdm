@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="navBox">
-      <div class="top">
+      <div class="top" v-show="show">
         <div class="leftIcon lt">
           <van-icon name="manager-o" color="white" size="25px" />
         </div>
@@ -14,11 +14,11 @@
     </div>
     <van-tabs v-model="active" :duration="0" :swipe-threshold="6">
       <van-tab title="关注" to="/index/Find/Follow"></van-tab>
-      <van-tab title="晒一晒">晒一晒</van-tab>
-      <van-tab title="京品">京品</van-tab>
-      <van-tab title="5G">5G</van-tab>
-      <van-tab title="直播">直播</van-tab>
-      <van-tab title="视频">视频</van-tab>
+      <van-tab title="晒一晒" to="/index/Find/Bask"></van-tab>
+      <van-tab title="京品" to="/index/Find/Jing"></van-tab>
+      <van-tab title="5G" to="/index/Find/Five"></van-tab>
+      <van-tab title="直播" to="/index/Find/Broadcast"></van-tab>
+      <van-tab title="视频" to="/index/Find/Videoo"></van-tab>
     </van-tabs>
     <router-view></router-view>
   </div>
@@ -29,10 +29,12 @@ export default {
   name: "find",
   data() {
     return {
-      active: 0
+      active: 0,
+      show: true
     };
   },
-  components: {}
+  components: {},
+  methods: {}
 };
 </script>
 <style lang="less" scoped>

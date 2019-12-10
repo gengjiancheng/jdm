@@ -4,41 +4,42 @@ import Bask from '../../components/Find/bask.vue'
 import Jing from '../../components/Find/jing.vue'
 import Five from '../../components/Find/five.vue'
 import Broadcast from '../../components/Find/broadcast.vue'
-import Video from '../../components/Find/video.vue'
+import Videoo from '../../components/Find/videoo.vue'
 
 export default [{
     path: '/index/Find',
     name: 'Find',
     component: Find,
+    redirect: '/index/Find/Follow',
     children: [{
             path: '/index/Find/Follow',
             name: 'Follow',
             component: Follow
         },
         {
-            path: '/Bask',
+            path: '/index/Find/Bask',
             name: 'Bask',
             component: Bask
         },
         {
-            path: '/Jing',
+            path: '/index/Find/Jing',
             name: 'Jing',
             component: Jing
         },
         {
-            path: '/Five',
+            path: '/index/Find/Five',
             name: 'Five',
             component: Five
         },
         {
-            path: '/Broadcast',
+            path: '/index/Find/Broadcast',
             name: 'Broadcast',
             component: Broadcast
         },
         {
-            path: '/Video',
-            name: 'Video',
-            component: Video
+            path: '/index/Find/Videoo',
+            name: 'Videoo',
+            component: Videoo
         }
     ]
 }]

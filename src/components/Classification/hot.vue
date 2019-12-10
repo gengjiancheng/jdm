@@ -1,12 +1,12 @@
 <template>
     <div>
-        
+       <router-view> hahah hhjj</router-view>
     </div>
 </template>
 <script>
 // @ is an alias to /src
 export default {
-    name: 'video',
+    name: 'XXX',
     data() {
         return {
         

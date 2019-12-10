@@ -47,11 +47,14 @@ export default {
   width: 100vw;
   height: 15vw;
   display: flex;
-  span {
-    flex: 1;
-    width: 20vw;
-    line-height: 15vw;
-    font-size: 4vw;
-  }
+  box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
+  background: white;
+  z-index: 999;
+}
+span {
+  flex: 1;
+  width: 20vw;
+  line-height: 15vw;
+  font-size: 4vw;
 }
 </style>

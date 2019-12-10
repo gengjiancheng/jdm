@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        晒一晒
     </div>
 </template>
 <script>
