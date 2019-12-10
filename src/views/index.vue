@@ -49,22 +49,12 @@ export default {
   display: flex;
   box-shadow: 0 0 10px 0 hsla(0, 6%, 58%, 0.6);
   background: white;
-<<<<<<< HEAD
   z-index: 999;
-=======
-  z-index: 1000;
-  
-  }
->>>>>>> 52616d234cd0791dcbff1028af7e947849d62ac3
-  span {
-    flex: 1;
-    width: 20vw;
-    line-height: 15vw;
-    font-size: 4vw;
-<<<<<<< HEAD
-  }
-=======
-    
->>>>>>> 52616d234cd0791dcbff1028af7e947849d62ac3
+}
+span {
+  flex: 1;
+  width: 20vw;
+  line-height: 15vw;
+  font-size: 4vw;
 }
 </style>
