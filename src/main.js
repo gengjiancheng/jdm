@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import Vant from 'vant'
 import 'vant/lib/index.css'
+import './css/reset.min.css'
 
 Vue.use(Vant);
 Vue.config.productionTip = false
