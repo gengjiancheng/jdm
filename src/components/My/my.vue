@@ -8,17 +8,84 @@
     <div class="headerBox">
       <div class="rt">
         <van-icon name="setting-o" />
-        <span>账号管理</span>
+        <span style="font-size:12px">账号管理</span>
       </div>
-      <div class="user">
+      <div class="user cl">
         <div class="imgBox lt"></div>
-        <div class="Word lt">
+        <div class="Word lt" style="margin-left:4vw">
           jd_6358c559550b5
           <van-icon name="edit" />
-          <div Word2>铜牌</div>
+          <div
+            class="Word2 rt"
+            style=" width: 40px;
+            height: 16px;
+            height: 16px;
+            line-height: 16px;
+            vertical-align: middle;
+            border-radius: 12px 12px 12px 12px;
+            background-color: #c8483f;
+            font-size: 10px;
+            color: #fff;
+            margin-left:3vw"
+          >铜牌</div>
         </div>
         <br />
-        <div>用户名:我才懒得热情</div>
+        <div class="lt" style="margin-left:4vw;margin-top:2vw;font-size:12px;color:#fff">用户名:我才懒得热情</div>
+        <div class="gx lt">共享值500</div>
+      </div>
+    </div>
+    <div class="mid">
+      <div>
+        <div
+          class="pay"
+          style="background:url(https://img11.360buyimg.com/jdphoto/s40x40_jfs/t14911/113/1615678148/168/7734f24f/5a53578eN0e2811b6.png) 50%/auto 20px no-repeat;"
+        ></div>
+        <span>去付款</span>
+      </div>
+      <div>
+        <div
+          class="shou"
+          style="background: url(https://img11.360buyimg.com/jdphoto/s40x40_jfs/t14608/2/1636876268/266/b4ebb3f2/5a535791N627c296c.png)50% / auto 20px no-repeat;"
+        ></div>
+        <span style="margin-top:4vw">待收货</span>
+      </div>
+      <div>
+        <div
+          class="tui"
+          style="background:url(https://img11.360buyimg.com/jdphoto/s40x40_jfs/t15049/345/1573771240/492/7ef15694/5a5357eaNab882dcb.png) 50%/auto 20px no-repeat;"
+        ></div>
+        <span>退换/售后</span>
+      </div>
+      <div>
+        <div
+          class="all"
+          style="background:url(https://img30.360buyimg.com/jdphoto/jfs/t14953/346/2113764063/185/1a1dcd24/5a6d7b8bN8431ea1a.png) 50%/auto 20px no-repeat;"
+        ></div>
+        <span>全部订单</span>
+      </div>
+    </div>
+    <div class="mid2">
+      <div>
+        <span style="font-size:16px">0</span> 张
+        <span>京东卷</span>
+      </div>
+      <div>
+        <span>开通有礼</span>
+        <span>白条</span>
+      </div>
+      <div>
+        <span style="font-size:16px">6</span> 个
+        <span>京豆</span>
+      </div>
+      <div>
+        <span style="font-size:16px">0</span> 元
+        <span>白条</span>
+      </div>
+      <div>
+        <div
+          style="width:64px;height:18px; background:url(https://img11.360buyimg.com/jdphoto/s40x40_jfs/t20329/11/1228908740/243/73a7934c/5b235f37Ne85fdb85.png) no-repeat center center scroll;background-size: auto 100%;"
+        ></div>
+        <span>我的资产</span>
       </div>
     </div>
   </div>
@@ -76,7 +143,7 @@ export default {
     > .user {
       width: 90vw;
       height: 22vw;
-      background: yellow;
+      // background: yellow;
       margin: 8vw 5vw 0 5vw;
       position: relative;
       > .imgBox {
@@ -92,20 +159,21 @@ export default {
         background-size: 100% 100%;
         background-repeat-x: no-repeat;
         background-repeat-y: no-repeat;
-        > .Word {
-          width: 120vw;
-          > .Word2 {
-            width: 40px;
-            height: 16px;
-            height: 16px;
-            line-height: 16px;
-            vertical-align: middle;
-            border-radius: 0 12px 12px 0;
-            background-color: #c8483f;
-            font-size: 10px;
-            color: #fff;
-          }
-        }
+        // > .Word {
+        //   width: 120vw;
+        //   margin-left: 10vw;
+        //   > .Word2 {
+        //     width: 40px;
+        //     height: 16px;
+        //     height: 16px;
+        //     line-height: 16px;
+        //     vertical-align: middle;
+        //     border-radius: 0 12px 12px 0;
+        //     background-color: #c8483f;
+        //     font-size: 10px;
+        //     color: #fff;
+        //   }
+        // }
       }
       > div:nth-child(2) {
         font-size: 14px;
@@ -116,6 +184,66 @@ export default {
           display: block;
         }
       }
+      > .gx {
+        max-width: 20vw;
+        height: 16px;
+        line-height: 16px;
+        padding: 0 8px;
+        margin: 6px 8px 0 0;
+        border-radius: 10px;
+        font-size: 10px;
+        color: #fff;
+        background: #c8483f;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        position: absolute;
+        left: 24vw;
+        top: 13vw;
+      }
+    }
+  }
+  .mid {
+    height: 72px;
+    margin: 19px 0;
+    background: #fff;
+    display: flex;
+    .pay,
+    .shou,
+    .tui,
+    .all {
+      width: 80px;
+      height: 30px;
+    }
+
+    > div > span {
+      color: #666666;
+      font-size: 12px;
+      // display: block;
+      flex: 1;
+    }
+  }
+  .mid2 {
+    height: 72px;
+    margin: 19px 0;
+    background: #fff;
+    display: flex;
+    > div {
+      color: #e93b3d;
+    }
+    > div > span:nth-child(1) {
+      font-size: 10px;
+      line-height: 18px;
+      height: 18px;
+      color: #e93b3d;
+      white-space: nowrap;
+    }
+    > div > span:nth-child(2) {
+      display: block;
+      color: #666666;
+      font-size: 12px;
+      flex: 1;
     }
   }
 }
