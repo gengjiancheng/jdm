@@ -1,6 +1,10 @@
 <template>
   <div>
-    关注
+    <div class="imgBox">
+      <img src="../../assets/gou.png" alt />
+      <p>你还未关注店铺</p>
+      <p>关注后为你精选历史最低价商品</p>
+    </div>
   </div>
 </template>
 <script>

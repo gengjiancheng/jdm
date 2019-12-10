@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="navBox">
-      <div class="top">
+      <div class="top" v-show="show">
         <div class="leftIcon lt">
           <van-icon name="manager-o" color="white" size="25px" />
         </div>
@@ -20,11 +20,6 @@
       <van-tab title="直播" to="/index/Find/Broadcast"></van-tab>
       <van-tab title="视频" to="/index/Find/Videoo"></van-tab>
     </van-tabs>
-
-    <!-- <van-tabs v-model="active" animated>
-      <van-tab :title="'选项 ' + index"></van-tab>
-    </van-tabs>-->
-
     <router-view></router-view>
   </div>
 </template>
@@ -34,10 +29,12 @@ export default {
   name: "find",
   data() {
     return {
-      active: 0
+      active: 0,
+      show: true
     };
   },
-  components: {}
+  components: {},
+  methods: {}
 };
 </script>
 <style lang="less" scoped>

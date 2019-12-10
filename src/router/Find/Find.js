@@ -10,6 +10,7 @@ export default [{
     path: '/index/Find',
     name: 'Find',
     component: Find,
+    redirect: '/index/Find/Follow',
     children: [{
             path: '/index/Find/Follow',
             name: 'Follow',
