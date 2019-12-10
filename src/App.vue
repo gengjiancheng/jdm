@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style lang="less">
-html,body{
+html,
+body {
   height: 100%;
   width: 100%;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -18,14 +19,14 @@ html,body{
   height: 100%;
   width: 100%;
 }
-.lt{
+.lt {
   float: left;
 }
-.rt{
+.rt {
   float: right;
 }
-.cl::after{
-  content: '';
+.cl::after {
+  content: "";
   display: block;
   clear: both;
 }

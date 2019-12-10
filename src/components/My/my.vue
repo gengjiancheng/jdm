@@ -17,10 +17,9 @@
           <van-icon name="edit" />
           <div
             class="Word2 rt"
-            style=" width: 40px;
-            height: 16px;
-            height: 16px;
-            line-height: 16px;
+            style=" width: 12.5vw;
+            height: 5vw;
+            line-height: 5vw;
             vertical-align: middle;
             border-radius: 12px 12px 12px 12px;
             background-color: #c8483f;
@@ -83,9 +82,102 @@
       </div>
       <div>
         <div
-          style="width:64px;height:18px; background:url(https://img11.360buyimg.com/jdphoto/s40x40_jfs/t20329/11/1228908740/243/73a7934c/5b235f37Ne85fdb85.png) no-repeat center center scroll;background-size: auto 100%;"
+          style="width:20vw;height:5.63vw; background:url(https://img11.360buyimg.com/jdphoto/s40x40_jfs/t20329/11/1228908740/243/73a7934c/5b235f37Ne85fdb85.png) no-repeat center center scroll;background-size: auto 100%;"
         ></div>
         <span>我的资产</span>
+      </div>
+    </div>
+    <div class="mid3">
+      <div>
+        <span>0</span>
+        <br />
+        <span>商品收藏</span>
+      </div>
+      <div>
+        <span>1</span>
+        <br />
+        <span>店铺收藏</span>
+      </div>
+      <div>
+        <span>4</span>
+        <br />
+        <span>我的足迹</span>
+      </div>
+    </div>
+    <div class="mid4">
+      <div>
+        <div
+          class="pay"
+          style="background-image: url(https://img14.360buyimg.com/jdphoto/jfs/t1/24988/22/12030/2316/5c94d6d4E7cdcf995/c8fe8e84d89685f7.png!q70.webp);
+        background-position-x: 9vw;
+        background-position-y: 3.7vw;
+        background-size: 27% 56%;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;"
+        ></div>
+        <span>我的预约</span>
+      </div>
+      <div>
+        <div
+          class="pay"
+          style="background-image: url(//img10.360buyimg.com/jdphoto/jfs/t12931/150/1327543095/1276/e9e67341/5a1e9ee2Nb5baf153.png!q70.webp);
+        background-position-x: 9vw;
+        background-position-y: 3.7vw;
+        background-size:  27% 56%;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;"
+        ></div>
+        <span>京东火车票</span>
+      </div>
+      <div>
+        <div
+          class="pay"
+          style="background-image: url(//img14.360buyimg.com/jdphoto/jfs/t13612/121/1346421356/1355/9014e74f/5a1e9f1cNab886864.png!q70.webp);
+        background-position-x: 9vw;
+        background-position-y: 3.7vw;
+        background-size:  27% 56%;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;"
+        ></div>
+        <span>应用推荐</span>
+      </div>
+      <div>
+        <div
+          class="pay"
+          style="background-image: url(//img30.360buyimg.com/jdphoto/jfs/t12514/60/1318835455/1723/d6ae70f5/5a1e9e39Ndc5e9285.png!q70.webp);
+        background-position-x: 9vw;
+        background-position-y: 3.7vw;
+        background-size:  27% 56%;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;"
+        ></div>
+        <span>用户福利</span>
+      </div>
+    </div>
+    <div class="mid5">
+      <div>
+        <div
+          class="pay"
+          style="background-image: url(//img14.360buyimg.com/jdphoto/jfs/t13612/121/1346421356/1355/9014e74f/5a1e9f1cNab886864.png!q70.webp);
+        background-position-x: 9vw;
+        background-position-y: 3.7vw;
+        background-size:  27% 56%;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;"
+        ></div>
+        <span>应用推荐</span>
+      </div>
+      <div>
+        <div
+          class="pay"
+          style="background-image: url(//img30.360buyimg.com/jdphoto/jfs/t12514/60/1318835455/1723/d6ae70f5/5a1e9e39Ndc5e9285.png!q70.webp);
+        background-position-x: 9vw;
+        background-position-y: 3.7vw;
+        background-size:  27% 56%;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;"
+        ></div>
+        <span>用户福利</span>
       </div>
     </div>
   </div>
@@ -179,17 +271,17 @@ export default {
         font-size: 14px;
         color: #ffffff;
         > span {
-          width: 20px;
-          height: 20px;
+          width: 6.3vw;
+          height: 6.3vw;
           display: block;
         }
       }
       > .gx {
         max-width: 20vw;
-        height: 16px;
+        height: 5vw;
         line-height: 16px;
-        padding: 0 8px;
-        margin: 6px 8px 0 0;
+        padding: 0 2.5vw;
+        margin: 1.88vw 2.5vw 0 0;
         border-radius: 10px;
         font-size: 10px;
         color: #fff;
@@ -205,16 +297,17 @@ export default {
     }
   }
   .mid {
-    height: 72px;
-    margin: 19px 0;
+    height: 19.2vw;
+    margin: 5.07vw 0;
     background: #fff;
+    width: 100%;
     display: flex;
     .pay,
     .shou,
     .tui,
     .all {
-      width: 80px;
-      height: 30px;
+      width: 25vw;
+      height: 9.38vw;
     }
 
     > div > span {
@@ -225,8 +318,8 @@ export default {
     }
   }
   .mid2 {
-    height: 72px;
-    margin: 19px 0;
+    height: 15.7vw;
+    margin: 6vw 0;
     background: #fff;
     display: flex;
     > div {
@@ -234,8 +327,8 @@ export default {
     }
     > div > span:nth-child(1) {
       font-size: 10px;
-      line-height: 18px;
-      height: 18px;
+      line-height: 5.63vw;
+      height: 5.63vw;
       color: #e93b3d;
       white-space: nowrap;
     }
@@ -244,6 +337,65 @@ export default {
       color: #666666;
       font-size: 12px;
       flex: 1;
+    }
+  }
+  .mid3 {
+    height: 24vw;
+    // margin: 12px 0;
+    background: #fff;
+    display: flex;
+    position: relative;
+    > div {
+      width: 39vw;
+      height: 24vw;
+      > span:nth-child(1) {
+        font-size: 16px;
+        font-weight: 700;
+        color: #333;
+        position: relative;
+      }
+      > span:nth-child(3) {
+        font-size: 12px;
+        color: #666;
+        line-height: 10.7vw;
+        display: block;
+        text-align: center;
+        margin-left: 6.6vw;
+        position: absolute;
+        top: 7.19vw;
+      }
+    }
+  }
+  .mid4 {
+    height: 19.2vw;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    .pay,
+    .shou,
+    .tui,
+    .all {
+      width: 25vw;
+      height: 9.38vw;
+    }
+
+    > div > span {
+      color: #666666;
+      font-size: 12px;
+      // display: block;
+      flex: 1;
+    }
+  }
+  .mid5{
+    display: flex;
+    .pay{
+      width: 25vw;
+      height: 9.38vw;
+    }
+    >div >span{
+      color: #666666;
+      font-size: 12px;
+      width:25%;
     }
   }
 }
