@@ -7,7 +7,7 @@
         </div>
         <div class="rightH">
           <van-icon class="two" name="share" size="25px" />
-          <van-icon class="three" name="chat-o" size="25px" />
+          <van-icon class="three" name="chat-o" size="25px" @click="ale" />
         </div>
       </div>
       <div class="swiper">
@@ -64,11 +64,40 @@
 
       <van-goods-action>
         <van-goods-action-icon icon="chat-o" text="客服" />
-        <van-goods-action-icon icon="cart-o" text="购物车" info="5" />
-        <van-goods-action-icon icon="shop-o" text="店铺" info="12" />
+        <van-goods-action-icon icon="cart-o" text="购物车" />
+        <van-goods-action-icon icon="shop-o" text="店铺" />
         <van-goods-action-button type="warning" text="加入购物车" @click="submit" />
         <van-goods-action-button type="danger" text="立即购买" />
       </van-goods-action>
+
+      <div class="dialog" v-show="discover">
+        <ul>
+          <li>
+            <van-icon name="chat-o" />消息
+          </li>
+          <router-link to="/index/home">
+            <li>
+              <van-icon name="home-o" />首页
+            </li>
+          </router-link>
+          <router-link to="/search">
+            <li>
+              <van-icon name="search" />搜索
+            </li>
+          </router-link>
+          <router-link to="/index/Find/Follow">
+            <li>
+              <van-icon name="like-o" />我的关注
+            </li>
+          </router-link>
+          <li>
+            <van-icon name="fire-o" />浏览记录
+          </li>
+          <li>
+            <van-icon name="edit" />功能反馈
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -78,7 +107,8 @@ export default {
   name: "detail",
   data() {
     return {
-      show: false
+      show: false,
+      discover: false
     };
   },
   components: {},
@@ -88,6 +118,9 @@ export default {
     },
     submit() {
       this.$router.push("/index/Cart");
+    },
+    ale() {
+      this.discover = !this.discover;
     }
   }
 };
@@ -95,6 +128,7 @@ export default {
 <style lang="less" scoped>
 .body {
   width: 100vw;
+  position: relative;
   .header {
     width: 100%;
     overflow: hidden;
@@ -199,6 +233,26 @@ export default {
     p {
       text-align: left;
       font-size: 16px;
+    }
+  }
+  .dialog {
+    height: 42vw;
+    width: 25vw;
+    position: absolute;
+    right: 2vw;
+    top: 7vw;
+    background: rgba(0, 0, 0, 0.2);
+    ul {
+      height: 42vw;
+      width: 25vw;
+      text-align: left;
+      li {
+        width: 22vw;
+        height: 7vw;
+        line-height: 7vw;
+        padding-left: 3vw;
+        color: #000;
+      }
     }
   }
 }
