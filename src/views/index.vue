@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app_container">
     <div class="nav">
       <van-tabbar v-model="active">
         <router-link to="/index/Home" tag="span">
@@ -56,5 +56,8 @@ span {
   width: 20vw;
   line-height: 15vw;
   font-size: 4vw;
+}
+.app_container {
+  margin-bottom: 56.25px;
 }
 </style>
