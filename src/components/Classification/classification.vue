@@ -1,15 +1,25 @@
 <template>
   <div class="box">
-    <van-icon class="log" name="arrow-left" />
-    <van-icon class="login" name="ellipsis" />
+    <van-icon @click="jeep" class="log" name="arrow-left" />
+    <van-icon @click="out" class="login" name="ellipsis" />
     <van-search class="input" placeholder="请输入搜索关键词" shape="round"></van-search>
-    <van-tabs title-active-color="red">
-      <van-tab v-for="item in ary" :key="item.id" :title="item.title">{{item.title}}</van-tab>
+    <!-- <div class="context">
+      <span>首页</span>
+      <span>分类搜索</span>
+      <span>购物车</span>
+      <span>我的京东</span>
+      <span>浏览记录</span>
+    </div> -->
+    <van-tabs title-active-color="red" @click="die">
+      <van-tab v-for="item in ary" :key="item.id" :title="item.title" >
+        <my-hot></my-hot>
+      </van-tab>
     </van-tabs>
   </div>
 </template>
 <script>
 // @ is an alias to /src
+import myhot from "./hot";
 export default {
   name: "classification",
   data() {
@@ -174,8 +184,22 @@ export default {
       ]
     };
   },
-  methods: {},
-  components: {}
+  methods: {
+    jeep(){
+      this.$router.push('/home')
+    },
+    die(name,title){
+       let h = document.getElementsByClassName('van-tab')[0],
+           t = document.getElementsByClassName('van-tabs__nav')[0]
+           
+    },
+    out(){
+       
+    }
+  },
+  components: {
+    "my-hot":myhot
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -185,46 +209,60 @@ export default {
 .log {
   float: left;
   margin: 4vw 0 0 4vw;
+  font-size: 5vw;
 }
 .input {
-  margin: 2vw auto;
+  margin: 3vw auto;
   width: 80vw;
 }
 .login {
   float: right;
   margin: 4vw 4vw 0 0;
+  font-size: 5vw;
 }
-.van-tabs__wrap {
+/deep/.van-tabs__wrap {
   height: 100% !important;
+  overflow: visible;
 }
-.van-tabs__nav {
+/deep/.van-tabs__nav{
   flex-direction: column;
-  height: 60vw;
 }
-.van-tabs__line {
-  background-color: #fff !important;
+/deep/.van-tabs__line {
+  background-color: #fff;
 }
-.van-tab {
-  height: 20vw;
-  width: 20vw;
-  box-sizing: none !important;
-}
-.van-tabs__nav--line {
+/deep/.van-tabs__nav--line {
   width: 20vw;
 }
-.van-tabs__content {
-  width: 70vw;
-}
-.van-tab__pane {
+/deep/.van-tab__pane {
   position: absolute;
-  top: 5vw;
+  top: 3vw;
   right: 0;
   width: 75vw !important;
 }
-span {
+/deep/span {
   line-height: 11vw;
 }
-.title-active-color {
-  color: aqua;
+/deep/.van-tabs__wrap--scrollable .van-tabs__nav{
+  overflow-x: visible;
+  overflow: visible;
+  background: #f8f8f8;
 }
+/deep/.van-grid.van-hairline--top{
+  border: none;
+}
+// .context{
+//   width: 35vw;
+//   height: 47vw;
+//   background: rgba(0,0,0,0.9);
+//   position: absolute;
+//   top: 17vw;
+//   right: 4vw;
+//   z-index: 1500;
+//   border-radius: 3vw;
+//   span{
+//     font-size: 4vw;
+//     color: #fff;
+
+//   }
+// }
 </style>
