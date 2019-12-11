@@ -102,7 +102,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -111,7 +111,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -120,7 +120,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -129,7 +129,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -138,7 +138,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -147,69 +147,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-      </ul>
-    </div>
-    <div class="swiper">
-      <h1>
-        小米京东自营旗舰店
-        <button class="btn" @click="guan">关注</button>
-      </h1>
-      <ul>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro尊享</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro尊享</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro尊享</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro尊享</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro尊享</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -226,7 +164,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -235,7 +173,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -244,7 +182,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -253,7 +191,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -262,7 +200,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -271,7 +209,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -288,7 +226,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -297,7 +235,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -306,7 +244,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -315,7 +253,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -324,7 +262,7 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
@@ -333,7 +271,69 @@
             <img src="../../assets/logo.png" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro尊享</p>
+          <p class="title">Redmi K20Pro</p>
+          <p class="price">￥2399</p>
+          <p class="oloPrice">￥2999</p>
+        </li>
+      </ul>
+    </div>
+    <div class="swiper">
+      <h1>
+        小米京东自营旗舰店
+        <button class="btn" @click="guan">关注</button>
+      </h1>
+      <ul>
+        <li>
+          <div class="Box">
+            <img src="../../assets/logo.png" alt />
+            <p>60天最低价</p>
+          </div>
+          <p class="title">Redmi K20Pro</p>
+          <p class="price">￥2399</p>
+          <p class="oloPrice">￥2999</p>
+        </li>
+        <li>
+          <div class="Box">
+            <img src="../../assets/logo.png" alt />
+            <p>60天最低价</p>
+          </div>
+          <p class="title">Redmi K20Pro</p>
+          <p class="price">￥2399</p>
+          <p class="oloPrice">￥2999</p>
+        </li>
+        <li>
+          <div class="Box">
+            <img src="../../assets/logo.png" alt />
+            <p>60天最低价</p>
+          </div>
+          <p class="title">Redmi K20Pro</p>
+          <p class="price">￥2399</p>
+          <p class="oloPrice">￥2999</p>
+        </li>
+        <li>
+          <div class="Box">
+            <img src="../../assets/logo.png" alt />
+            <p>60天最低价</p>
+          </div>
+          <p class="title">Redmi K20Pro</p>
+          <p class="price">￥2399</p>
+          <p class="oloPrice">￥2999</p>
+        </li>
+        <li>
+          <div class="Box">
+            <img src="../../assets/logo.png" alt />
+            <p>60天最低价</p>
+          </div>
+          <p class="title">Redmi K20Pro</p>
+          <p class="price">￥2399</p>
+          <p class="oloPrice">￥2999</p>
+        </li>
+        <li>
+          <div class="Box">
+            <img src="../../assets/logo.png" alt />
+            <p>60天最低价</p>
+          </div>
+          <p class="title">Redmi K20Pro</p>
           <p class="price">￥2399</p>
           <p class="oloPrice">￥2999</p>
         </li>
