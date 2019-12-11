@@ -1,0 +1,98 @@
+[
+    {
+        "id": "1",
+        "shop": "小米京东自营店",
+        "title": "Redmi K20Pro尊享",
+        "img": "../../assets/logo.png",
+        "price": "2399",
+        "oldPrice": "2999"
+    },
+    {
+        "id": "2",
+        "shop": "华为京东自营店",
+        "title": "Huawei Mate30Pro",
+        "img": "../../assets/a.png",
+        "price": "5599",
+        "oldPrice": "5999"
+    },
+    {
+        "id": "3",
+        "shop": "联想京东自营店",
+        "title": "联想拯救者",
+        "img": "../../assets/b.png",
+        "price": "4588",
+        "oldPrice": "4788"
+    },
+    {
+        "id": "4",
+        "shop": "飞科京东自营店",
+        "title": "飞科 S372",
+        "img": "../../assets/logo.png",
+        "price": "99",
+        "oldPrice": "129"
+    },
+    {
+        "id": "5",
+        "shop": "耐克京东自营店",
+        "title": "Nike Air Force 1",
+        "img": "../../assets/logo.png",
+        "price": "1199",
+        "oldPrice": "1699"
+    },
+    {
+        "id": "6",
+        "shop": "阿迪京东自营店",
+        "title": "Adidas B27140",
+        "img": "../../assets/5.jpg",
+        "price": "799",
+        "oldPrice": "559"
+    },
+    {
+        "id": "7",
+        "shop": "巴黎欧莱雅京东自营店",
+        "title": "男士面膜",
+        "img": "../../assets/cartimg.png",
+        "price": "169",
+        "oldPrice": "199"
+    },
+    {
+        "id": "8",
+        "shop": "鬼冢虎京东自营店",
+        "title": "帆布鞋",
+        "img": "../../assets/d.jpg",
+        "price": "550",
+        "oldPrice": "850"
+    },
+    {
+        "id": "9",
+        "shop": "小米京东自营店",
+        "title": "小米9 畅享版",
+        "img": "../../assets/logo.png",
+        "price": "2799",
+        "oldPrice": "2999"
+    },
+    {
+        "id": "10",
+        "shop": "特百惠京东自营店",
+        "title": "黑色水杯",
+        "img": "../../assets/c.jpg",
+        "price": "129",
+        "oldPrice": "149"
+    },
+    {
+        "id": "11",
+        "shop": "DELL京东自营店",
+        "title": "戴尔 5557",
+        "img": "../../assets/logo.png",
+        "price": "4799",
+        "oldPrice": "4999"
+    },
+    {
+        "id": "12",
+        "shop": "达尔优京东自营店",
+        "title": "达尔优黑轴机械键盘",
+        "img": "../../assets/logo.png",
+        "price": "499",
+        "oldPrice": "539"
+    }
+]

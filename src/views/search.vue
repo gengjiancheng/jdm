@@ -1,12 +1,12 @@
 <template>
   <div>
-    <van-icon class="icon" name="arrow-left"  />
+    <van-icon class="icon" name="arrow-left" @click="back" />
     <van-search
       v-model="value"
       placeholder="请输入搜索关键词"
       show-action
       shape="round"
-      @keydown.enter="onSearch"
+      @keydown.enter="Search"
     >
       <div slot="action" @click="onSearch">搜索</div>
     </van-search>
@@ -40,8 +40,19 @@ export default {
       this.value = "";
       this.$router.push("/detail");
     },
+    Search() {
+      let obj = {
+        value: this.value,
+        id: Math.random()
+      };
+      this.list.unshift(obj);
+      this.value = "";
+    },
     clear() {
       this.list = [];
+    },
+    back() {
+      this.$router.go(-1);
     }
   }
 };

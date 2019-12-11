@@ -9,12 +9,92 @@
       猜你喜欢
       <van-icon name="info-o" />
     </p>
+    <!-- 右上角消息定位弹框 -->
+    <div class="dialog" v-show="discover">
+      <ul>
+        <li>
+          <van-icon name="chat-o" />消息
+        </li>
+        <router-link to="/index/home">
+          <li>
+            <van-icon name="home-o" />首页
+          </li>
+        </router-link>
+        <router-link to="/search">
+          <li>
+            <van-icon name="search" />搜索
+          </li>
+        </router-link>
+        <router-link to="/index/Find/Follow">
+          <li>
+            <van-icon name="like-o" />我的关注
+          </li>
+        </router-link>
+        <li>
+          <van-icon name="fire-o" />浏览记录
+        </li>
+        <li>
+          <van-icon name="edit" />功能反馈
+        </li>
+      </ul>
+    </div>
 
     <!-- 下方轮播图 -->
-    <div class="swiper">
+    <!-- <div class="swiper">
       <h1>
         小米京东自营旗舰店
         <van-button class="btn" round type="info" @click="guan">关注</van-button>
+      </h1>
+      <ul>
+        <li v-for="item in ary" :key="item.id">
+          <div class="Box">
+            <img :src="item.img" alt />
+            <p>60天最低价</p>
+          </div>
+          <p class="title">{{item.title}}</p>
+          <p class="price">￥{{item.price}}</p>
+          <p class="oloPrice">￥{{item.oldPrice}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="swiper">
+      <h1>
+        华为京东自营店
+        <van-button class="btn" round type="info" @click="guan">关注</van-button>
+      </h1>
+      <ul>
+        <li v-for="item in ary" :key="item.id">
+          <div class="Box">
+            <img :src="item.img" alt />
+            <p>60天最低价</p>
+          </div>
+          <p class="title">{{item.title}}</p>
+          <p class="price">￥{{item.price}}</p>
+          <p class="oloPrice">￥{{item.oldPrice}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="swiper">
+      <h1>
+        联想京东自营旗舰店
+        <van-button class="btn" round type="info" @click="guan">关注</van-button>
+      </h1>
+      <ul>
+        <li v-for="item in ary" :key="item.id">
+          <div class="Box">
+            <img :src="item.img" alt />
+            <p>60天最低价</p>
+          </div>
+          <p class="title">Redmi K20Pro尊享</p>
+          <p class="price">￥2399</p>
+          <p class="oloPrice">￥2999</p>
+        </li>
+      </ul>
+    </div>-->
+    <div class="swiper">
+      <h1>
+        小米京东自营旗舰店
+        <button class="btn" @click="guan">关注</button>
       </h1>
       <ul>
         <li>
@@ -76,7 +156,7 @@
     <div class="swiper">
       <h1>
         小米京东自营旗舰店
-        <van-button class="btn" round type="info" @click="guan">关注</van-button>
+        <button class="btn" @click="guan">关注</button>
       </h1>
       <ul>
         <li>
@@ -138,7 +218,7 @@
     <div class="swiper">
       <h1>
         小米京东自营旗舰店
-        <van-button class="btn" round type="info" @click="guan">关注</van-button>
+        <button class="btn" @click="guan">关注</button>
       </h1>
       <ul>
         <li>
@@ -200,7 +280,7 @@
     <div class="swiper">
       <h1>
         小米京东自营旗舰店
-        <van-button class="btn" round type="info" @click="guan">关注</van-button>
+        <button class="btn" @click="guan">关注</button>
       </h1>
       <ul>
         <li>
@@ -267,6 +347,7 @@ export default {
   name: "follow",
   data() {
     return {
+      ary: [],
       show: true
     };
   },
@@ -294,6 +375,7 @@ export default {
     color: #ccc;
   }
 }
+
 .love {
   width: 100vw;
   font-weight: 700;
@@ -308,10 +390,10 @@ export default {
     height: 10vw;
     line-height: 10vw;
     .btn {
-      text-align: center;
       line-height: 10vw;
       height: 10vw;
       width: 20vw;
+      float: right;
     }
   }
   ul {

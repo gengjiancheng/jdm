@@ -3,7 +3,7 @@
     <div class="body">
       <div class="header">
         <div class="leftH">
-          <van-icon class="one" name="arrow-left" size="25px" />
+          <van-icon class="one" name="arrow-left" size="25px" @click="back" />
         </div>
         <div class="rightH">
           <van-icon class="two" name="share" size="25px" />
@@ -127,6 +127,7 @@
         <van-goods-action-button type="warning" text="加入购物车" @click="submit" />
         <van-goods-action-button type="danger" text="立即购买" />
       </van-goods-action>
+      <!-- 物品选择框 -->
     </div>
   </div>
 </template>
@@ -138,6 +139,7 @@ export default {
     return {
       show: false,
       discover: false
+      // oneOut: false
     };
   },
   components: {},
@@ -150,7 +152,13 @@ export default {
     },
     ale() {
       this.discover = !this.discover;
+    },
+    back() {
+      this.$router.go(-1);
     }
+    // out() {
+    //   this.oneOut = !this.oneOut;
+    // }
   }
 };
 </script>
