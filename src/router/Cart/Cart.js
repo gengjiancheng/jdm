@@ -1,6 +1,7 @@
 import Cart from '../../components/Cart/cart.vue'
 export default [{
-    path: '/index/Cart',
+    path: '/Cart',
     name: 'Cart',
-    component: Cart
+    component: Cart,
+    children:[]
 }]

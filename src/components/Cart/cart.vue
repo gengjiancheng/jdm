@@ -1,14 +1,17 @@
 <template>
   <div class="box">
+    <!-- 购物车头部 -->
     <div class="header">
-      <div>
+      <div @click="goback">
         <van-icon class="arrow" name="arrow-left" />
       </div>
       <div class="cart">购物车</div>
-      <div class="menu">
+      <div class="menu" @click="myshow">
         <van-icon name="ellipsis" />
+        
       </div>
     </div>
+    <!-- 未购物的状态 -->
     <div class="myshow" style="display:none">
       <div class="cart_img">
         <img src="@/assets/cartimg.png" alt />
@@ -54,29 +57,7 @@
         </div>
       </div>
     </div>
-    <!-- <div class="myhide">
-      <div class="head">
-        <input class="inp" type="checkbox" name id />
-        <i></i>
-        <span>妮卡</span>
-        <div class="bodyBox">
-          <div class="left">
-            <input type="checkbox" name id />
-          </div>
-          <div class="right">
-            <img src="../../assets/logo.png" alt />
-            <p>你开恩特士大夫撒地方撒旦飞洒发法大幅撒地方撒地方阿萨</p>
-            <div class="choose">奢华金 移动</div>
-            <p class="price">秒杀中，23</p>
-            <div>
-              ￥84.90
-              <input type="number" name id />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>-->
-
+      <!-- 已有购物的状态 -->
     <div class="myhide">
       <van-checkbox v-model="checkedAll" class="title">JD京东自营</van-checkbox>
       <van-checkbox-group v-model="result" ref="checkboxGroup">
@@ -123,24 +104,22 @@
         </van-checkbox>
       </van-checkbox-group>
     </div>
-
+    <!-- 你还想要 -->
     <div class="shopcart_mod_title shopcart_mod_title1">
       <span class="shopcart_mod_title_text">可能你还想要</span>
     </div>
+    <!-- 提交订单 -->
     <div class="submitorder">
       <van-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit">
         <van-checkbox v-model="checked">全选</van-checkbox>
-        <span slot="tip">
-          你的收货地址不支持同城送,
-          <span>修改地址</span>
-        </span>
       </van-submit-bar>
     </div>
+    <ba v-show="discover"></ba>
   </div>
 </template>
 <script>
 // @ is an alias to /src
-
+import Dia from '../dia'
 export default {
   name: "cart",
   data() {
@@ -237,7 +216,8 @@ export default {
           value: "ping1",
           num: 1
         }
-      ]
+      ],
+      discover: false
     };
   },
   computed: {
@@ -257,9 +237,20 @@ export default {
     }
   },
   methods: {
-    onSubmit() {}
+    onSubmit() {
+      this.$router.push('/pay')
+    },
+    myshow(){
+      console.log(this.$router)
+      this.discover = !this.discover;
+    },
+    goback(){
+      this.$router.back()
+    }
   },
-  components: {}
+  components: {
+    ba:Dia
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -293,7 +284,7 @@ export default {
     &::after {
       content: "";
       position: absolute;
-      z-index: 1;
+      z-index: 0;
       pointer-events: none;
       background-color: #e5e5e5;
       height: 1px;
@@ -499,6 +490,9 @@ export default {
     }
   }
   .myhide {
+    /deep/.van-card__title {
+      font-size: 14px;
+    }
     /deep/.van-checkbox__icon {
       margin-left: 2vw;
     }
@@ -506,11 +500,16 @@ export default {
       border-color: rgb(255, 0, 0) !important;
       background-color: rgb(255, 0, 0) !important;
     }
-    .title{
-      font-size:20px;
-      font-weight:700;
+    /deep/.van-card__bottom {
+      text-align: left;
+    }
+    .title {
+      font-size: 25px;
+      font-weight: 700;
+      text-align: left;
     }
   }
+  
   /* .myhide {
     // padding: 0vw 5vw;
     text-align: left;
@@ -585,13 +584,16 @@ export default {
       height: 1px;
       left: 10px;
       right: 10px;
-      top: 81%;
+      top: 98%;
     }
   }
   .submitorder {
     /deep/.van-checkbox__icon--checked .van-icon {
       border-color: rgb(255, 0, 0) !important;
       background-color: rgb(255, 0, 0) !important;
+    }
+    .van-submit-bar {
+      height: 29vw;
     }
   }
 }

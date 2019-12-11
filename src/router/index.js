@@ -8,6 +8,7 @@ import Find from './Find/Find'
 import My from './My/My'
 import search from './search'
 import detail from './detail'
+import pay from './Cart/pay';
 Vue.use(VueRouter)
 
 
@@ -17,7 +18,7 @@ const routes = [{
   component: Index,
   redirect: '/index/Home',
   children: Home.concat(Cart, Classification, Find, My)
-}].concat(search,detail)
+}].concat(search,detail,pay)
 
 const router = new VueRouter({
   mode: 'hash',

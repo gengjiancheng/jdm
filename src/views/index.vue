@@ -11,7 +11,7 @@
         <router-link to="/index/Find" tag="span">
           <van-tabbar-item icon="share">发现</van-tabbar-item>
         </router-link>
-        <router-link to="/index/Cart" tag="span">
+        <router-link to="/Cart" tag="span">
           <van-tabbar-item icon="shopping-cart-o">购物车</van-tabbar-item>
         </router-link>
         <router-link to="/index/My" tag="span">
@@ -34,7 +34,7 @@ export default {
   components: {}
 };
 </script>
-<style lang="less">
+<style lang="less" scoped>
 * {
   padding: 0;
   margin: 0;
