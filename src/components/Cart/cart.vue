@@ -78,7 +78,7 @@
     </div>-->
 
     <div class="myhide">
-      <van-checkbox v-model="checkedAll">JD京东自营</van-checkbox>
+      <van-checkbox v-model="checkedAll" class="title">JD京东自营</van-checkbox>
       <van-checkbox-group v-model="result" ref="checkboxGroup">
         <van-checkbox v-for="item in arr" :key="item.value" :name="item.value">
           <van-card
@@ -100,7 +100,7 @@
           </van-card>
         </van-checkbox>
       </van-checkbox-group>
-      <van-checkbox v-model="checkedAll">鸿星尔克</van-checkbox>
+      <van-checkbox v-model="checkedAll" class="title">鸿星尔克</van-checkbox>
       <van-checkbox-group v-model="result" ref="checkboxGroup">
         <van-checkbox v-for="item in arr" :key="item.value" :name="item.value">
           <van-card
@@ -505,6 +505,10 @@ export default {
     /deep/.van-checkbox__icon .van-icon {
       border-color: rgb(255, 0, 0) !important;
       background-color: rgb(255, 0, 0) !important;
+    }
+    .title{
+      font-size:20px;
+      font-weight:700;
     }
   }
   /* .myhide {
