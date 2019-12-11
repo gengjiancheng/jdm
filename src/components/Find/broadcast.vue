@@ -1,6 +1,7 @@
 <template>
   <div class="aaa">
     <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
+      <!-- 轮播图 -->
       <div class="swiper">
         <van-swipe :loop="true" :width="300">
           <van-swipe-item v-for="item in ary" :key="item.id">
@@ -9,6 +10,7 @@
           </van-swipe-item>
         </van-swipe>
       </div>
+      <!-- 三个图片 -->
       <div class="anchor">
         <ul>
           <li class="lt">
@@ -23,6 +25,8 @@
           </li>
         </ul>
       </div>
+
+      <!-- 渲染的轮播图 -->
       <div class="broad">
         <ul>
           <li v-for="item in ary1" :key="item.id">
@@ -226,7 +230,7 @@ export default {
           width: 100vw;
           text-align: left;
         }
-        >p{
+        > p {
           width: 100vw;
           text-align: left;
         }

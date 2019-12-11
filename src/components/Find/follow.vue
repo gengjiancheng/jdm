@@ -9,6 +9,8 @@
       猜你喜欢
       <van-icon name="info-o" />
     </p>
+
+    <!-- 下方轮播图 -->
     <div class="swiper">
       <h1>
         小米京东自营旗舰店

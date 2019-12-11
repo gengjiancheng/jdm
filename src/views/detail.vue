@@ -10,6 +10,7 @@
           <van-icon class="three" name="chat-o" size="25px" @click="ale" />
         </div>
       </div>
+      <!-- 轮播图 -->
       <div class="swiper">
         <van-swipe :autoplay="3000" indicator-color="white">
           <van-swipe-item>
@@ -26,50 +27,8 @@
           </van-swipe-item>
         </van-swipe>
       </div>
-      <div class="detail">
-        <div class="price">￥559.00</div>
-        <van-icon class="icon" size="25px" name="gold-coin-o" />
-        <van-icon class="icon" size="25px" name="like-o" />
-        <p class="title">adidas阿迪达斯三叶草2019新款中性贝壳头superstar金标休闲鞋 B27140 42</p>
-        <p class="noticy">
-          开PLUS年卡会员 下单预估省
-          <i>30.00元</i>
-          <i class="open">立即开通</i>
-        </p>
-        <p class="sport">12.12暖暖预售火爆开启！运动大牌直降，两券叠加300-60、400-80、600-140、800-170、900-230点我查看更多详情</p>
-      </div>
 
-      <div class="discount" @click="appear">
-        <div class="leftBox">优惠</div>
-        <div class="rightBox">
-          <ul>
-            <li>
-              <span>白条</span>满99减5元(数量有限，先到先得)
-            </li>
-            <li>
-              <span>领券</span>满900减180 满600减120 满300减60
-            </li>
-            <li>
-              <span>满减</span>满300元减30元，满600元减60元，满900元减90元
-            </li>
-          </ul>
-        </div>
-      </div>
-      <van-action-sheet class="elastic" v-model="show" title="优惠">
-        <h2>白条支付</h2>
-        <p>满99减5元(数量有限，先到先得)</p>
-        <h2>促销</h2>
-        <p>满300元减30元、满600元减60元、满900元减90元</p>
-      </van-action-sheet>
-
-      <van-goods-action>
-        <van-goods-action-icon icon="chat-o" text="客服" />
-        <van-goods-action-icon icon="cart-o" text="购物车" />
-        <van-goods-action-icon icon="shop-o" text="店铺" />
-        <van-goods-action-button type="warning" text="加入购物车" @click="submit" />
-        <van-goods-action-button type="danger" text="立即购买" />
-      </van-goods-action>
-
+      <!-- 右上角消息定位弹框 -->
       <div class="dialog" v-show="discover">
         <ul>
           <li>
@@ -98,6 +57,76 @@
           </li>
         </ul>
       </div>
+      <div class="detail">
+        <div class="price">￥559.00</div>
+        <van-icon class="icon" size="25px" name="gold-coin-o" />
+        <van-icon class="icon" size="25px" name="like-o" />
+        <p class="title">adidas阿迪达斯三叶草2019新款中性贝壳头superstar金标休闲鞋 B27140 42</p>
+        <p class="noticy">
+          开PLUS年卡会员 下单预估省
+          <i>30.00元</i>
+          <i class="open">立即开通</i>
+        </p>
+        <p class="sport">12.12暖暖预售火爆开启！运动大牌直降，两券叠加300-60、400-80、600-140、800-170、900-230点我查看更多详情</p>
+      </div>
+
+      <!-- 优惠触发底部弹框 -->
+      <div class="discount" @click="appear">
+        <div class="leftBox">优惠</div>
+        <div class="rightBox">
+          <ul>
+            <li>
+              <span>白条</span>满99减5元(数量有限，先到先得)
+            </li>
+            <li>
+              <span>领券</span>满900减180 满600减120 满300减60
+            </li>
+            <li>
+              <span>满减</span>满300元减30元，满600元减60元，满900元减90元
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 底部弹框 -->
+      <van-action-sheet class="elastic" v-model="show" title="优惠">
+        <h2>白条支付</h2>
+        <p>满99减5元(数量有限，先到先得)</p>
+        <h2>促销</h2>
+        <p>满300元减30元、满600元减60元、满900元减90元</p>
+      </van-action-sheet>
+
+      <!-- 已选商品 -->
+      <div class="choose">
+        <ul>
+          <li class="one">
+            <div>已选</div>
+            <div class="mode">B27140,</div>
+            <div class="size">37,</div>
+            <div class="num">1件</div>
+          </li>
+          <li>
+            <div>送至</div>
+            <div class="area">北京昌平区霍营街道珠峰培训</div>
+          </li>
+          <li>
+            <div>运费</div>
+            <div class="freight">店铺单笔订单不满99元,收运费8元</div>
+          </li>
+          <li>
+            <div>店铺发货&售后 7天无理由退货 送保险</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 底部加入购物车 -->
+      <van-goods-action class="car">
+        <van-goods-action-icon icon="chat-o" text="客服" />
+        <van-goods-action-icon icon="cart-o" text="购物车" />
+        <van-goods-action-icon icon="shop-o" text="店铺" />
+        <van-goods-action-button type="warning" text="加入购物车" @click="submit" />
+        <van-goods-action-button type="danger" text="立即购买" />
+      </van-goods-action>
     </div>
   </div>
 </template>
@@ -205,11 +234,13 @@ export default {
   .discount {
     width: 100vw;
     height: 36vw;
+    box-shadow: 3px 1px 0px 6px #ccc;
+    border-radius: 7px;
     .leftBox {
-      height: 36vw;
+      height: 31vw;
       width: 20vw;
       float: left;
-      margin-top: 5vw;
+      padding-top: 5vw;
     }
     .rightBox {
       height: 36vw;
@@ -252,6 +283,25 @@ export default {
         line-height: 7vw;
         padding-left: 3vw;
         color: #000;
+      }
+    }
+  }
+  .choose {
+    margin-top: 5vw;
+    width: 90vw;
+    padding: 0 5vw;
+    height: 70vw;
+    overflow: hidden;
+    ul {
+      width: 100vw;
+      height: 40vw;
+      overflow: hidden;
+      li {
+        line-height: 10vw;
+        height: 10vw;
+        div {
+          float: left;
+        }
       }
     }
   }
