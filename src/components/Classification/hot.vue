@@ -6,7 +6,7 @@
     <span>排行榜</span>
      <van-icon name="arrow" /></a>
     <van-grid :column-num="4">
-      <van-grid-item v-for="value in 40" :key="value" icon="" text="" />
+      <van-grid-item v-for="item in ary" :key="item.id" :icon="item.img" :text="item.desc" />
     </van-grid>
   </div>
 </template>
@@ -15,14 +15,18 @@
 export default {
   name: "hot",
   data() {
-    return {};
+    return {
+      ary:[]
+    };
   },
   components: {},
   created() {
-    this.$store.dispatch("getHotList",{})
+    this.ary = this.$store.state.hotList
+    console.log(this.ary)
+    
   },
   mounted() {
-    console.log(this.$store.state.hotList)
+    
   }
 };
 </script>
