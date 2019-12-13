@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 let http = axios.create({
-    baseURL:'http://localhost:3000',//打包之前这个位置需要写成自己的后台地址
+    // baseURL:'http://localhost:3000',//打包之前这个位置需要写成自己的后台地址
     params:{
         t:Math.random()
     }
