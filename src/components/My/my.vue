@@ -187,10 +187,10 @@ export default {
   data() {
     return {};
   },
-  methods:{
-    fn(){
+  methods: {
+    fn() {
       this.$router.back();
-    }
+    },
   },
   components: {}
 };
