@@ -8,11 +8,10 @@
       <div class="cart">购物车</div>
       <div class="menu" @click="myshow">
         <van-icon name="ellipsis" />
-        
       </div>
     </div>
     <!-- 未购物的状态 -->
-    <div class="myshow" style="display:none">
+    <div class="myshow" v-show="totalAmount === 0">
       <div class="cart_img">
         <img src="@/assets/cartimg.png" alt />
         <p>购物车空空如也，去逛逛吧~</p>
@@ -57,60 +56,39 @@
         </div>
       </div>
     </div>
-      <!-- 已有购物的状态 -->
-    <div class="myhide">
-      <van-checkbox v-model="checkedAll" class="title">JD京东自营</van-checkbox>
-      <van-checkbox-group v-model="result" ref="checkboxGroup">
-        <van-checkbox v-for="item in arr" :key="item.value" :name="item.value">
-          <van-card
-            price="100.00"
-            desc="【多C多美味】高端红西柚 小蛮腰"
-            title="
-            蒙牛 纯甄小蛮腰 高端轻酪乳风味酸牛奶 红西柚口味 230g*10 礼盒装（新老包装随机发货）
-        "
-            thumb="https://img.yzcdn.cn/vant/t-thirt.jpg"
-          >
-            <div slot></div>
-            <div slot="tags">
-              <van-tag plain type="danger">满300减30</van-tag>
-              <van-tag plain type="danger">免费分期</van-tag>
-            </div>
-            <div slot="footer">
-              <van-stepper v-model="item.num" />
-            </div>
-          </van-card>
-        </van-checkbox>
-      </van-checkbox-group>
-      <van-checkbox v-model="checkedAll" class="title">鸿星尔克</van-checkbox>
-      <van-checkbox-group v-model="result" ref="checkboxGroup">
-        <van-checkbox v-for="item in arr" :key="item.value" :name="item.value">
-          <van-card
-            price="100.00"
-            desc="【多C多美味】高端红西柚 小蛮腰"
-            title="
-            蒙牛 纯甄小蛮腰 高端轻酪乳风味酸牛奶 红西柚口味 230g*10 礼盒装（新老包装随机发货）
-        "
-            thumb="https://img.yzcdn.cn/vant/t-thirt.jpg"
-          >
-            <div slot></div>
-            <div slot="tags">
-              <van-tag plain type="danger">满300减30</van-tag>
-              <van-tag plain type="danger">免费分期</van-tag>
-            </div>
-            <div slot="footer">
-              <van-stepper v-model="item.num" />
-            </div>
-          </van-card>
-        </van-checkbox>
-      </van-checkbox-group>
+    <!-- 已有购物的状态 -->
+    <div class="myhide" v-show="totalAmount !== 0">
+      <template v-for="(shopItem, index) in order">
+        <van-checkbox v-model="checkedAll" class="title" :key="shopItem.shopName">{{shopItem.shopName}}</van-checkbox>
+        <van-checkbox-group v-model="result" ref="checkboxGroup" :key="index">
+          <van-checkbox v-for="(item, itemIndex) in shopItem.projectList" :key="itemIndex" :name="item.id">
+            <van-card
+              :price="item.price"
+              :desc="item.desc"
+              :title="item.title"
+              :thumb="item.thumb"
+            >
+              <div slot></div>
+              <div slot="tags">
+                <van-tag plain type="danger">满300减30</van-tag>
+                <van-tag plain type="danger">免费分期</van-tag>
+              </div>
+              <div slot="footer">
+                <van-stepper min=0 v-model="item.num" @change="numChange($event)"/>
+              </div>
+            </van-card>
+          </van-checkbox>
+        </van-checkbox-group>
+      </template>
+
     </div>
     <!-- 你还想要 -->
     <div class="shopcart_mod_title shopcart_mod_title1">
       <span class="shopcart_mod_title_text">可能你还想要</span>
     </div>
     <!-- 提交订单 -->
-    <div class="submitorder">
-      <van-submit-bar :price="3050" button-text="提交订单" @submit="onSubmit">
+    <div class="submitorder" v-show="totalAmount !== 0">
+      <van-submit-bar :price="totalAmount" button-text="提交订单" @submit="onSubmit">
         <van-checkbox v-model="checked">全选</van-checkbox>
       </van-submit-bar>
     </div>
@@ -119,12 +97,57 @@
 </template>
 <script>
 // @ is an alias to /src
-import Dia from '../dia'
+import Dia from "../dia";
 export default {
   name: "cart",
   data() {
     return {
+      price: "",
       checked: false,
+      totalAmount: 0,
+      order: [
+        {
+          shopName: "京东自营",
+          totalAmount: 0,
+          totalNum: 0,
+          projectList: [
+            {
+              price: 100,
+              desc: "【多C多美味】高端红西柚 小蛮腰",
+              title: "蒙牛 纯甄小蛮腰 高端轻酪乳风味酸牛奶 红西柚口味 230g*10 礼盒装（新老包装随机发货）",
+              thumb: "https://img.yzcdn.cn/vant/t-thirt.jpg",
+              num: 1,
+              totalAmount: 0,
+              id: 0
+            },
+            {
+              price: 100,
+              desc: "【多C多美味】高端红西柚 小蛮腰",
+              title: "蒙牛 纯甄小蛮腰 高端轻酪乳风味酸牛奶 红西柚口味 230g*10 礼盒装（新老包装随机发货）",
+              thumb: "https://img.yzcdn.cn/vant/t-thirt.jpg",
+              num: 1,
+              totalAmount: 0,
+              id: 1
+            }
+          ]
+        },
+        {
+          shopName: "鸿星尔克",
+          totalAmount: 0,
+          totalNum: 0,
+          projectList: [
+            {
+              price: 90,
+              desc: "【多C多美味】高端红西柚 小蛮腰",
+              title: "蒙牛 纯甄小蛮腰 高端轻酪乳风味酸牛奶 红西柚口味 230g*10 礼盒装（新老包装随机发货）",
+              thumb: "https://img.yzcdn.cn/vant/t-thirt.jpg",
+              num: 1,
+              totalAmount: 0,
+              id: 3
+            }
+          ]
+        }
+      ],
       ary: [
         {
           id: 1,
@@ -207,7 +230,18 @@ export default {
         }
       ],
       result: [],
+      result1: [],
       arr: [
+        {
+          value: "ping",
+          num: 1
+        },
+        {
+          value: "ping1",
+          num: 1
+        }
+      ],
+      arr1: [
         {
           value: "ping",
           num: 1
@@ -219,6 +253,10 @@ export default {
       ],
       discover: false
     };
+  },
+  mounted () {
+    this.calculatTotalAmount();
+    this.numChange();
   },
   computed: {
     checkedAll: {
@@ -234,22 +272,58 @@ export default {
         }
         this.result = [];
       }
+    },
+    checkedAll1: {
+      get() {
+        return this.arr1.length == this.result1.length;
+      },
+      set(value) {
+        if (value) {
+          this.arr1.forEach(item => {
+            this.result1.push(item.value);
+          });
+          return;
+        }
+        this.result1 = [];
+      }
     }
   },
   methods: {
     onSubmit() {
-      this.$router.push('/pay')
+      this.$router.push("/pay");
     },
-    myshow(){
-      console.log(this.$router)
+    myshow() {
+      console.log(this.$router);
       this.discover = !this.discover;
     },
-    goback(){
-      this.$router.back()
+    goback() {
+      this.$router.back();
+    },
+    calculatTotalAmount() {
+      this.totalAmount = 0;
+      for (let shopItem of this.order) {
+        this.totalAmount += shopItem.totalAmount;
+      }
+      this.totalAmount *= 100;
+    },
+    numChange (e) {
+      this.order = this.order.map(shopItem => {
+        shopItem.totalAmount = 0;
+        shopItem.totalNum = 0;
+        shopItem.projectList.map(projectItem => {
+            projectItem.totalAmount = projectItem.num * projectItem.price;
+            shopItem.totalAmount += projectItem.totalAmount;
+            shopItem.totalNum += projectItem.num;
+            return projectItem;
+        });
+        return shopItem;
+      });
+
+      this.calculatTotalAmount();
     }
   },
   components: {
-    ba:Dia
+    ba: Dia
   }
 };
 </script>
@@ -504,12 +578,12 @@ export default {
       text-align: left;
     }
     .title {
-      font-size: 25px;
+      font-size: 16px;
       font-weight: 700;
       text-align: left;
     }
   }
-  
+
   /* .myhide {
     // padding: 0vw 5vw;
     text-align: left;
