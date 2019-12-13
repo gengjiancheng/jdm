@@ -5,7 +5,7 @@ export function getHotList({commit},option){
         commit('changeHotList',{
             oldType:option.oldType,
             newType:option.newType,
-            data:data.data
+            data:data
         })
     })
 }
