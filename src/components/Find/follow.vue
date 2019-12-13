@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="imgBox" v-show="show">
+    <div class="imgBox">
       <img src="../../assets/gou.png" alt />
       <p>你还未关注店铺~</p>
       <p>关注后为你精选历史最低价商品</p>
@@ -195,9 +195,6 @@ export default {
   },
   components: {},
   methods: {
-    guan() {
-      this.show = !this.show;
-    }
   }
 };
 </script>
