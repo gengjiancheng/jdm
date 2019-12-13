@@ -3,13 +3,6 @@
     <van-icon @click="jeep" class="log" name="arrow-left" />
     <van-icon @click="out" class="login" name="ellipsis" />
     <van-search class="input" placeholder="请输入搜索关键词" shape="round"></van-search>
-    <!-- <div class="context">
-      <span>首页</span>
-      <span>分类搜索</span>
-      <span>购物车</span>
-      <span>我的京东</span>
-      <span>浏览记录</span>
-    </div> -->
     <van-tabs title-active-color="red" @click="die">
       <van-tab v-for="item in ary" :key="item.id" :title="item.title" >
         <my-hot></my-hot>
@@ -186,12 +179,13 @@ export default {
   },
   methods: {
     jeep(){
-      this.$router.push('/home')
+      this.$router.push('/index/home')
     },
     die(name,title){
        let h = document.getElementsByClassName('van-tab')[0],
            t = document.getElementsByClassName('van-tabs__nav')[0]
-           
+           h.clientHeight == 0;
+           console.log(name,title)
     },
     out(){
        
@@ -221,8 +215,8 @@ export default {
   font-size: 5vw;
 }
 /deep/.van-tabs__wrap {
-  height: 100% !important;
-  overflow: visible;
+  height: 600px !important;
+  overflow: auto;
 }
 /deep/.van-tabs__nav{
   flex-direction: column;
@@ -232,6 +226,7 @@ export default {
 }
 /deep/.van-tabs__nav--line {
   width: 20vw;
+  height: 13vw;
 }
 /deep/.van-tab__pane {
   position: absolute;
@@ -243,26 +238,10 @@ export default {
   line-height: 11vw;
 }
 /deep/.van-tabs__wrap--scrollable .van-tabs__nav{
-  overflow-x: visible;
   overflow: visible;
-  background: #f8f8f8;
+  
 }
 /deep/.van-grid.van-hairline--top{
   border: none;
 }
-// .context{
-//   width: 35vw;
-//   height: 47vw;
-//   background: rgba(0,0,0,0.9);
-//   position: absolute;
-//   top: 17vw;
-//   right: 4vw;
-//   z-index: 1500;
-//   border-radius: 3vw;
-//   span{
-//     font-size: 4vw;
-//     color: #fff;
-
-//   }
-// }
 </style>

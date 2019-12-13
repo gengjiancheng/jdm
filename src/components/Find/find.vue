@@ -25,7 +25,7 @@
           <li>
             <van-icon name="chat-o" />消息
           </li>
-          <router-link to="/index/home">
+          <router-link to="/index/Home">
             <li>
               <van-icon name="home-o" />首页
             </li>

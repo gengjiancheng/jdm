@@ -38,304 +38,21 @@
         </li>
       </ul>
     </div>
-
     <!-- 下方轮播图 -->
-    <!-- <div class="swiper">
+    <div class="swiper" v-for="item in ary" :key="item.id">
       <h1>
-        小米京东自营旗舰店
-        <van-button class="btn" round type="info" @click="guan">关注</van-button>
-      </h1>
-      <ul>
-        <li v-for="item in ary" :key="item.id">
-          <div class="Box">
-            <img :src="item.img" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">{{item.title}}</p>
-          <p class="price">￥{{item.price}}</p>
-          <p class="oloPrice">￥{{item.oldPrice}}</p>
-        </li>
-      </ul>
-    </div>
-    <div class="swiper">
-      <h1>
-        华为京东自营店
-        <van-button class="btn" round type="info" @click="guan">关注</van-button>
-      </h1>
-      <ul>
-        <li v-for="item in ary" :key="item.id">
-          <div class="Box">
-            <img :src="item.img" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">{{item.title}}</p>
-          <p class="price">￥{{item.price}}</p>
-          <p class="oloPrice">￥{{item.oldPrice}}</p>
-        </li>
-      </ul>
-    </div>
-    <div class="swiper">
-      <h1>
-        联想京东自营旗舰店
-        <van-button class="btn" round type="info" @click="guan">关注</van-button>
-      </h1>
-      <ul>
-        <li v-for="item in ary" :key="item.id">
-          <div class="Box">
-            <img :src="item.img" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro尊享</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-      </ul>
-    </div>-->
-    <div class="swiper">
-      <h1>
-        小米京东自营旗舰店
+        {{item.shop}}
         <button class="btn" @click="guan">关注</button>
       </h1>
       <ul>
-        <li>
+        <li v-for="items in item.ary2" :key="items.id">
           <div class="Box">
-            <img src="../../assets/logo.png" alt />
+            <img :src="items.img" alt />
             <p>60天最低价</p>
           </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-      </ul>
-    </div>
-    <div class="swiper">
-      <h1>
-        小米京东自营旗舰店
-        <button class="btn" @click="guan">关注</button>
-      </h1>
-      <ul>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-      </ul>
-    </div>
-    <div class="swiper">
-      <h1>
-        小米京东自营旗舰店
-        <button class="btn" @click="guan">关注</button>
-      </h1>
-      <ul>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-      </ul>
-    </div>
-    <div class="swiper">
-      <h1>
-        小米京东自营旗舰店
-        <button class="btn" @click="guan">关注</button>
-      </h1>
-      <ul>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
-        </li>
-        <li>
-          <div class="Box">
-            <img src="../../assets/logo.png" alt />
-            <p>60天最低价</p>
-          </div>
-          <p class="title">Redmi K20Pro</p>
-          <p class="price">￥2399</p>
-          <p class="oloPrice">￥2999</p>
+          <p class="title">{{items.title}}</p>
+          <p class="price">￥{{items.price}}</p>
+          <p class="oldPrice">￥{{items.oldPrice}}</p>
         </li>
       </ul>
     </div>
@@ -347,8 +64,133 @@ export default {
   name: "follow",
   data() {
     return {
-      ary: [],
-      show: true
+      ary: [
+        {
+          shop: "小米京东自营旗舰店",
+          id: 1,
+          ary2: [
+            {
+              id: 1,
+              img: require("../../assets/5.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 2,
+              img: require("../../assets/5.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 3,
+              img: require("../../assets/5.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 4,
+              img: require("../../assets/5.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 5,
+              img: require("../../assets/5.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            }
+          ]
+        },
+        {
+          shop: "华为京东自营旗舰店",
+          id: 2,
+          ary2: [
+            {
+              id: 1,
+              img: require("../../assets/6.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 2,
+              img: require("../../assets/6.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 3,
+              img: require("../../assets/6.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 4,
+              img: require("../../assets/6.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 5,
+              img: require("../../assets/6.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            }
+          ]
+        },
+        {
+          shop: "DELL京东自营旗舰店",
+          id: 3,
+          ary2: [
+            {
+              id: 1,
+              img: require("../../assets/7.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 2,
+              img: require("../../assets/7.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 3,
+              img: require("../../assets/7.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 4,
+              img: require("../../assets/7.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            },
+            {
+              id: 5,
+              img: require("../../assets/7.jpg"),
+              title: "红米K20Pro",
+              price: 2399,
+              oldPrice: 2999
+            }
+          ]
+        }
+      ],
+      show: true,
+      discover:false
     };
   },
   components: {},
@@ -433,7 +275,7 @@ export default {
       height: 6vw;
       color: red;
     }
-    .oloPrice {
+    .oldPrice {
       text-align: left;
       height: 6vw;
       text-decoration: line-through;

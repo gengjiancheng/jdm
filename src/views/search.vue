@@ -36,7 +36,7 @@ export default {
         value: this.value,
         id: Math.random()
       };
-      this.list.unshift(obj);
+      this.list.push(obj);
       this.value = "";
       this.$router.push("/detail");
     },
@@ -45,7 +45,7 @@ export default {
         value: this.value,
         id: Math.random()
       };
-      this.list.unshift(obj);
+      this.list.push(obj);
       this.value = "";
     },
     clear() {
