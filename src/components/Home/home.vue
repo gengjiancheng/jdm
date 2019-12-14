@@ -68,16 +68,42 @@
               <van-icon name="arrow" />
             </div>
           </div>
-          <van-swipe :loop="false" :width="80">
-            <van-swipe-item>
-              <img src="../../pictures/kill3.jpg" alt="">
-              <span class='price_now'>￥180</span>
-              <span class='price_past' >￥238</span>
-            </van-swipe-item>
-            <van-swipe-item>2</van-swipe-item>
-            <van-swipe-item>3</van-swipe-item>
-            <van-swipe-item>4</van-swipe-item>
-          </van-swipe>
+          <!-- 可以滑动的区域 -->
+          <ul class="swiper">
+            <li v-for="item in ary" :key="item.id">
+              <img :src="item.img" alt />
+              <span class="price_now">￥{{item.price}}</span>
+              <span class="price_past">￥{{item.priceold}}</span>
+            </li>
+            <li class="mall_seckill_item type_more">
+              <div class="btn">
+                <i>
+                  <van-icon name="arrow-left" />
+                </i>
+                <span class="inner">查看全部</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="floor">
+          <div class="floor_container">
+            <span class="img1">
+            <img src="../../assets/new1.jpg" alt />
+            </span>
+            <span class="img2">
+              <img src="../../assets/new.jpg" alt />
+            </span>
+          </div>
+        </div>
+        <div class="floor floor1">
+          <div class="floor_container">
+            <span class="img1">
+            <img src="../../assets/iphone.jpg" alt />
+            </span>
+            <span class="img2">
+              <img src="../../assets/music.jpg" alt />
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -230,11 +256,72 @@ export default {
           desc: "全部"
         }
       ],
-      
+      ary: [
+        {
+          id: 1,
+          img: require("../../pictures/kill3.jpg"),
+          price: 180,
+          priceold: 230
+        },
+        {
+          id: 2,
+          img: require("../../pictures/kill3.jpg"),
+          price: 180,
+          priceold: 230
+        },
+        {
+          id: 3,
+          img: require("../../pictures/kill3.jpg"),
+          price: 180,
+          priceold: 230
+        },
+        {
+          id: 4,
+          img: require("../../pictures/kill3.jpg"),
+          price: 180,
+          priceold: 230
+        },
+        {
+          id: 5,
+          img: require("../../pictures/kill3.jpg"),
+          price: 180,
+          priceold: 230
+        },
+        {
+          id: 6,
+          img: require("../../pictures/kill3.jpg"),
+          price: 180,
+          priceold: 230
+        },
+        {
+          id: 7,
+          img: require("../../pictures/kill3.jpg"),
+          price: 180,
+          priceold: 230
+        },
+        {
+          id: 8,
+          img: require("../../pictures/kill3.jpg"),
+          price: 180,
+          priceold: 230
+        },
+        {
+          id: 9,
+          img: require("../../pictures/kill3.jpg"),
+          price: 180,
+          priceold: 230
+        },
+        {
+          id: 10,
+          img: require("../../pictures/kill3.jpg"),
+          price: 180,
+          priceold: 230
+        }
+      ]
     };
   },
   created() {
-    this.getData()
+    this.getData();
   },
   methods: {
     getAddress(name) {
@@ -242,16 +329,16 @@ export default {
         this.address = result.address;
       });
     },
-    getData () {
+    getData() {
       let xhr = new XMLHttpRequest();
-      xhr.open('get', './killdata.json', true);
-      xhr.onreadystatechange = function () {
+      xhr.open("get", "./killdata.json", true);
+      xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && /200|304/.test(xhr.status)) {
-            let data = xhr.response;
-            console.log(data)
+          let data = xhr.response;
+          console.log(data);
         }
-      }
-      xhr.send()
+      };
+      xhr.send();
     }
   },
   components: {}
@@ -398,31 +485,108 @@ export default {
         margin: 1vw 3vw 0 0;
       }
     }
+    .swiper {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      display: flex;
+      > li {
+        width: 20.2vw;
+        height: 31.73vw;
+        > img {
+          width: 17.7vvw;
+          height: 17.7vw;
+        }
+        .price_now {
+          font-family: JDZhengHT-EN-Bold;
+          margin-top: 10px;
+          display: block;
+          color: #e93b3d;
+          font-size: 16px;
+          line-height: 16px;
+          height: 16px;
+          text-align: center;
+        }
+        .price_past {
+          color: #999;
+          font-size: 12px;
+          line-height: 12px;
+          margin: 4px 0 11px;
+          text-align: center;
+          padding: 0 2px;
+          display: inline-block;
+        }
+      }
+      .mall_seckill_item {
+        .inner {
+          margin: 0 5px;
+          display: block;
+        }
+      }
+    }
   }
-  .onekill>.van-swipe{
+  .onekill > .van-swipe {
     width: 100%;
     height: 100%;
-    .van-swipe-item{
+    .van-swipe-item {
       display: flex;
       flex-direction: column;
-      span{
+      span {
         font-size: 4vw;
-        &:nth-child(2){
-          color:#cb3403;
-          margin:2vw 0;
+        &:nth-child(2) {
+          color: #cb3403;
+          margin: 2vw 0;
           font-weight: 800;
         }
-        &:nth-child(3){
-          color: #666666;;
+        &:nth-child(3) {
+          color: #666666;
           text-decoration: line-through;
         }
       }
     }
-    img{
+    img {
       height: 40%;
       width: 18vw;
       margin-left: 2vw;
     }
+  }
+}
+
+.floor {
+  width: 101.66vw;
+  height: 31.73vw;
+  .floor_container{
+    margin-left:0.66vw;
+    margin-right:2.66vw;
+    margin-bottom:2.66vw;
+    .img1,.img2{
+    display:inline-block;
+    width:47.2vw;
+    height:31.73vw;
+    img{
+      border-radius:4px;
+      width:100%;
+      height:100%;
+    }
+  }
+  }
+}
+.floor1 {
+  width: 101.66vw;
+  height: 31.73vw;
+  .floor_container{
+    margin-left:0.66vw;
+    margin-right:2.66vw;
+    margin-bottom:2.66vw;
+    .img1,.img2{
+    display:inline-block;
+    width:47.2vw;
+    height:31.73vw;
+    img{
+      width:47vw;
+      height:26vw;
+    }
+  }
   }
 }
 </style>

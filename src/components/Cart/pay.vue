@@ -22,6 +22,7 @@
     </div>
     <!-- 购物信息 -->
     <div class="body">
+      <div class="title">JD 京东自营</div>
       <!-- 购买的物品信息 -->
       <van-card
         num="2"
@@ -58,17 +59,90 @@
                 <span class="jd_supper">(可选京准达)</span>
               </p>
               <div class="type_justify">
-                <div class="left">中小件送货时间</div>12-12 周四 09:00-15:00
+                <div class="left">中小件送货时间</div>
+                <div class="right">工作日、双休日与节假日均可送货</div>
               </div>
             </div>
           </li>
         </ul>
+        <div class="order_info">
+          <div class="title_area">
+            <span class="title">退换无忧</span>
+            <span class="desc">可获1次免费上门取件服务</span>
+          </div>
+          <div class="oper_area">
+            <span class="price">￥0.2</span>
+            <span class="sel_icon">
+              <input type="radio" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body">
+      <div class="title">JD 京东自营</div>
+      <!-- 购买的物品信息 -->
+      <van-card
+        num="2"
+        price="100.00"
+        desc="【多C多美味】高端红西柚 小蛮腰"
+        title="
+            蒙牛 纯甄小蛮腰 高端轻酪乳风味酸牛奶 红西柚口味 230g*10 礼盒装（新老包装随机发货）
+        "
+        thumb="https://img.yzcdn.cn/vant/t-thirt.jpg"
+      >
+        <div slot></div>
+        <div slot="tags">
+          <van-tag plain type="danger">满300减30</van-tag>
+          <van-tag plain type="danger">免费分期</van-tag>
+        </div>
+      </van-card>
+      <!-- 7天无理由退还货描述 -->
+      <ul>
+        <li>
+          <img src="@/assets/7icon.png" alt />不支持7天无理由退货
+        </li>
+        <li>
+          <img src="@/assets/8icon.png" alt />价格说明
+        </li>
+      </ul>
+      <!-- 配送服务 -->
+      <div class="order">
+        <ul class="order_list">
+          <li>
+            <strong>配送服务</strong>
+            <div class="shopption_content">
+              <p>
+                京东快递
+                <span class="jd_supper">(可选京准达)</span>
+              </p>
+              <div class="type_justify">
+                <div class="left">中小件送货时间</div>
+                <div class="right">工作日、双休日与节假日均可送货</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="order_info">
+          <div class="title_area">
+            <span class="title">退换无忧</span>
+            <span class="desc">可获1次免费上门取件服务</span>
+          </div>
+          <div class="oper_area">
+            <span class="price">￥0.2</span>
+            <span class="sel_icon">
+              <input type="radio" />
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
 // @ is an alias to /src
+import { Dialog } from 'vant';
+
 export default {
   name: "pay",
   data() {
@@ -85,9 +159,16 @@ export default {
       ]
     };
   },
-  methods:{
-    goback(){
-      this.$router.back()
+  methods: {
+    goback() {
+      Dialog.confirm({
+        title: "便宜不等人，请三思而行",
+      })
+        .then(() => {
+          // on confirm
+          this.$router.back();
+        })
+        .catch(() => {});
     }
   },
   components: {}
@@ -175,6 +256,11 @@ export default {
   padding: 0 10px;
   background: #fff;
   position: relative;
+  .title {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+  }
   > ul {
     padding: 6px 0;
     padding-left: 85px;
@@ -216,17 +302,46 @@ export default {
         }
         .shopption_content {
           p {
-            display: inline-block;
+            width: 89vw;
+            height: 4.8vw;
             margin: 5px 0;
+            position: absolute;
+            right: -100px;
             .jd_supper {
-              float: right;
               max-width: 200px;
               overflow: hidden;
               text-overflow: ellipsis;
               white-space: nowrap;
             }
           }
+          .type_justify {
+            position: absolute;
+            top: 39px;
+            left: 0;
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+            .left {
+              float: left;
+            }
+            .right {
+              margin-left: 84px;
+              float: right;
+            }
+          }
         }
+      }
+    }
+    .order_info {
+      position: relative;
+      top: 50px;
+      .title_area {
+        position: absolute;
+        left: -2px;
+      }
+      .oper_area {
+        position: absolute;
+        right: 0;
       }
     }
   }
