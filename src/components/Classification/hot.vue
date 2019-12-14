@@ -17,7 +17,7 @@ export default {
   name: "hot",
   data() {
     return {
-      ary:[]
+      
     };
   },
   components: {},
