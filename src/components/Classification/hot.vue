@@ -6,11 +6,12 @@
     <span>排行榜</span>
      <van-icon name="arrow" /></a>
     <van-grid :column-num="4">
-      <van-grid-item v-for="item in ary" :key="item.id" :icon="item.img" :text="item.desc" />
+      <van-grid-item v-for="item in hotList.data" :key="item.id" :icon="item.img" :text="item.desc" />
     </van-grid>
   </div>
 </template>
 <script>
+import {mapState} from "vuex";
 // @ is an alias to /src
 export default {
   name: "hot",
@@ -21,12 +22,18 @@ export default {
   },
   components: {},
   created() {
-    this.ary = this.$store.state.hotList
-    console.log(this.ary)
+    console.log(this.$store);
+     this.$store.dispatch('getHotList',{})
+
+    // this.ary = this.$store.state.hotList
+    // console.log(this.ary)
     
   },
+  computed:{
+    ...mapState(["hotList"])
+  },
   mounted() {
-    
+    console.log(this.hotList);
   }
 };
 </script>
