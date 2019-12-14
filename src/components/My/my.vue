@@ -1,7 +1,7 @@
 <template>
   <div class="myBox">
     <div class="header">
-      <van-icon class="lt" name="arrow-left" />
+      <van-icon class="lt" name="arrow-left" @click="fn" />
       <span class="title">我的京东</span>
       <van-icon class="rt" name="ellipsis" />
     </div>
@@ -177,78 +177,6 @@
         ></div>
         <span>用户福利</span>
       </div>
-      <div>
-        <div
-          class="pay"
-          style="background-image: url(https://img14.360buyimg.com/jdphoto/jfs/t1/24988/22/12030/2316/5c94d6d4E7cdcf995/c8fe8e84d89685f7.png!q70.webp);
-        background-position-x: 9vw;
-        background-position-y: 3.7vw;
-        background-size: 27% 56%;
-        background-repeat-x: no-repeat;
-        background-repeat-y: no-repeat;"
-        ></div>
-        <span>我的预约</span>
-      </div>
-      <div>
-        <div
-          class="pay"
-          style="background-image: url(//img10.360buyimg.com/jdphoto/jfs/t12931/150/1327543095/1276/e9e67341/5a1e9ee2Nb5baf153.png!q70.webp);
-        background-position-x: 9vw;
-        background-position-y: 3.7vw;
-        background-size:  27% 56%;
-        background-repeat-x: no-repeat;
-        background-repeat-y: no-repeat;"
-        ></div>
-        <span>京东火车票</span>
-      </div>
-      <div>
-        <div
-          class="pay"
-          style="background-image: url(//img14.360buyimg.com/jdphoto/jfs/t13612/121/1346421356/1355/9014e74f/5a1e9f1cNab886864.png!q70.webp);
-        background-position-x: 9vw;
-        background-position-y: 3.7vw;
-        background-size:  27% 56%;
-        background-repeat-x: no-repeat;
-        background-repeat-y: no-repeat;"
-        ></div>
-        <span>应用推荐</span>
-      </div>
-      <div>
-        <div
-          class="pay"
-          style="background-image: url(//img30.360buyimg.com/jdphoto/jfs/t12514/60/1318835455/1723/d6ae70f5/5a1e9e39Ndc5e9285.png!q70.webp);
-        background-position-x: 9vw;
-        background-position-y: 3.7vw;
-        background-size:  27% 56%;
-        background-repeat-x: no-repeat;
-        background-repeat-y: no-repeat;"
-        ></div>
-        <span>用户福利</span>
-      </div>
-      <div>
-        <div
-          class="pay"
-          style="background-image: url(//img14.360buyimg.com/jdphoto/jfs/t13612/121/1346421356/1355/9014e74f/5a1e9f1cNab886864.png!q70.webp);
-        background-position-x: 9vw;
-        background-position-y: 3.7vw;
-        background-size:  27% 56%;
-        background-repeat-x: no-repeat;
-        background-repeat-y: no-repeat;"
-        ></div>
-        <span>应用推荐</span>
-      </div>
-      <div>
-        <div
-          class="pay"
-          style="background-image: url(//img30.360buyimg.com/jdphoto/jfs/t12514/60/1318835455/1723/d6ae70f5/5a1e9e39Ndc5e9285.png!q70.webp);
-        background-position-x: 9vw;
-        background-position-y: 3.7vw;
-        background-size:  27% 56%;
-        background-repeat-x: no-repeat;
-        background-repeat-y: no-repeat;"
-        ></div>
-        <span>用户福利</span>
-      </div>
     </div>
   </div>
 </template>
@@ -258,6 +186,11 @@ export default {
   name: "my",
   data() {
     return {};
+  },
+  methods: {
+    fn() {
+      this.$router.back();
+    },
   },
   components: {}
 };
