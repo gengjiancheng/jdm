@@ -327,6 +327,7 @@ export default {
     display: flex;
     > div {
       color: #e93b3d;
+      flex:1;
     }
     > div > span:nth-child(1) {
       font-size: 10px;
