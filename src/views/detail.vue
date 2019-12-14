@@ -148,7 +148,7 @@ export default {
       this.show = !this.show;
     },
     submit() {
-      this.$router.push("/index/Cart");
+      this.$router.push("/Cart");
     },
     ale() {
       this.discover = !this.discover;
